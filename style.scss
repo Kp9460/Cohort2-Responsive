@@ -40,6 +40,9 @@ body {
 section {
     max-width: 2000px;
 }
+footer{
+    max-width: 2000px;
+}
 main {
     width: 100%;
     @include flex-column(0rem);
@@ -344,7 +347,7 @@ main {
             padding: 2rem;
             background-color: #cebd63;
             color: black;
-            border-radius: 1rem;
+            border-radius: 0.6rem;
 
             .top {
                 width: 100%;
@@ -357,23 +360,179 @@ main {
             }
             .bottom {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 gap: 1rem;
-                padding: 1rem 1rem;
+                padding: 1rem;
                 background-color: rgb(21, 21, 21);
                 color: rgba(236, 236, 236, 0.875);
                 border-radius: 0.6rem;
 
-                h2 {
-                    font-size: 1rem;
-                    font-weight: 500;
-                }
-                i {
-                    font-size: 1rem;
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h2 {
+                        font-size: 1rem;
+                        font-weight: 500;
+                    }
+                    i {
+                        font-size: 1rem;
+                    }
                 }
             }
+        }
+    }
+    footer {
+        width: 100%;
+        background-color: #141414;
+        padding: 0.5rem 1rem;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13rem 106vh 16vh;
+
+        .top {
+            width: 100%;
+            background-color: rgb(31, 31, 31);
+            border-radius: 0.6rem;
+            padding: 2rem;
+            @include flex-column(4.2rem);
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 100;
+                opacity: 0.8;
+            }
+
+            .icons {
+                @include flex-column(0rem);
+                flex-direction: row;
+                display: flex;
+                gap: 1rem;
+
+                .icn {
+                    background-color: rgba(71, 71, 71, 0.39);
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(221, 221, 221, 0.23);
+                    border-radius: 50%;
+                    padding: 0.7rem;
+                }
+
+                .icn {
+                    width: fit-content;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                    }
+                }
+                .icn:hover {
+                    border: 1px solid rgb(238, 238, 238);
+                    transition: all ease 0.6s;
+                }
+            }
+        }
+        .center {
+            width: 100%;
+            background-color: rgb(31, 31, 31);
+            border-radius: 0.6rem;
+            padding: 1.2rem 2rem;
+            @include flex-column(3rem);
+
+            .first {
+                width: 100%;
+
+                h1 {
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                }
+                h3 {
+                    font-size: 1rem;
+                    opacity: 0.9;
+                    line-height: 3rem;
+                    font-weight: 100;
+                }
+                h4 {
+                    width: fit-content;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    background-color: #cebd63;
+                    color: black;
+                    border-radius: 0.4rem;
+                    padding: 1.1rem 1.7rem;
+                }
+            }
+            .middle {
+                width: 100%;
+
+                h1 {
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                }
+                h3 {
+                    font-size: 1rem;
+                    opacity: 0.9;
+                    line-height: 3rem;
+                    font-weight: 100;
+                }
+            }
+            .last {
+                width: 100%;
+
+                h1 {
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                }
+                h3 {
+                    font-size: 1rem;
+                    opacity: 0.9;
+                    line-height: 3rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .bottom {
+            width: 100%;
+            background-color: rgb(31, 31, 31);
+            border-radius: 0.5rem;
+            @include flex-column(1rem);
+            padding: 2rem;
+
+            .first {
+                width: 100%;
+                line-height: 2rem;
+                font-size: 0.9rem;
+
+                h3 {
+                    text-align: center;
+                    opacity: 0.8;
+                    font-weight: 400;
+
+                    u {
+                        opacity: 1;
+                        color: white;
+                    }
+                }
+            }
+            .last {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                font-size: 0.9rem;
+                padding-bottom: 2rem;
+
+                i {
+                    font-size: 1.2rem;
+                    color: rgb(188, 188, 188);
+                    border: 1px solid rgb(82, 82, 82);
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                    background-color: #4444446f;
+                }
+            }
+
         }
     }
 }
@@ -554,30 +713,105 @@ main {
             }
         }
         section.view8 {
-            
             .view8-main {
                 flex-direction: row;
                 width: 100%;
+                padding: 3.5rem;
 
                 .top {
                     width: 80%;
-                    padding: 4rem;
+                    // background-color: #8d7676;
 
                     h1 {
-                        font-size: 5.7rem;
+                        font-size: 5.8rem;
                         line-height: 5.5rem;
                     }
                 }
                 .bottom {
                     width: 20%;
-                    padding: 1rem;
+                    background-color: #cebd63;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 0rem;
 
-                    h2 {
-                        font-size: 1rem;
-                        font-weight: 400;
+                    .button {
+                        display: flex;
+                        background-color: rgba(0, 0, 0, 0.896);
+                        padding: 1rem 2rem;
+                        border-radius: 0.5rem;
                     }
                 }
             }
+        }
+        footer {
+            grid-template-columns: 20vw 1fr;
+            grid-template-rows: 1fr 9vw;
+            grid-gap: 1.2rem;
+            grid-template-areas: "top center"
+                                 "top bottom";
+            padding-bottom: 1rem;
+            
+            .top {
+                grid-area: top;
+                justify-content: space-between;
+                padding: 3rem;
+                border-radius: 1rem;
+
+                h1{
+                    opacity: 1;
+                }
+            }   
+            .center {
+                grid-area: center;
+                flex-direction: row;
+                padding: 3rem;
+                border-radius: 1rem;
+
+                .first {
+
+                    h1{
+                        font-weight: 400;
+                        padding-bottom: 2rem;
+                    }
+                }
+                .middle {
+
+                    h1{
+                        font-weight: 400;
+                        padding-bottom: 2rem;
+                    }
+                }
+                .last {
+
+                    h1{
+                        font-weight: 400;
+                        padding-bottom: 2rem;
+                    }
+                }
+            } 
+            .bottom {
+                padding: 3rem;
+                grid-area: bottom;
+                border-radius: 1rem;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                
+
+                .first{
+                    width: 80%;
+                     h3{
+                        text-align: left;
+                     }
+                }
+                .last {
+                    padding-bottom: 0rem;
+                
+                    i{
+                        padding: 0.8rem;
+                    }
+                }
+            }                 
         }
     }
 }
